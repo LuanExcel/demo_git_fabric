@@ -2,18 +2,18 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "b0dc6429a3e482ec2045",
   "position": {
-    "x": 709.22201138519927,
+    "x": 477.67235926628717,
     "y": 43.719165085388994,
     "z": 0,
-    "height": 231.54965211891209,
-    "width": 550.53763440860212,
+    "height": 493.86464263124606,
+    "width": 782.08728652751427,
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Category": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -23,58 +23,209 @@
                       "Entity": "calendario"
                     }
                   },
-                  "Property": "Data"
+                  "Property": "MesAno"
                 }
               },
-              "queryRef": "calendario.Data",
-              "nativeQueryRef": "Data",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
+              "queryRef": "calendario.MesAno",
+              "nativeQueryRef": "MesAno"
+            },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "cotacoes"
-                        }
-                      },
-                      "Property": "Cotacao"
+                    "SourceRef": {
+                      "Entity": "transacoes"
                     }
                   },
-                  "Function": 1
+                  "Property": "Valor Total"
                 }
               },
-              "queryRef": "Avg(cotacoes.Cotacao)",
-              "nativeQueryRef": "Média de Cotacao"
+              "queryRef": "transacoes.Valor Total",
+              "nativeQueryRef": "Valor Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cotacoes"
+                    }
+                  },
+                  "Property": "Cotação do dia"
+                }
+              },
+              "queryRef": "cotacoes.Cotação do dia",
+              "nativeQueryRef": "Cotação do dia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "transacoes"
+                    }
+                  },
+                  "Property": "Cotação corrigida"
+                }
+              },
+              "queryRef": "transacoes.Cotação corrigida",
+              "nativeQueryRef": "Cotação corrigida"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "transacoes"
+                    }
+                  },
+                  "Property": "Total R$"
+                }
+              },
+              "queryRef": "transacoes.Total R$",
+              "nativeQueryRef": "Total R$"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "calendario"
-                  }
-                },
-                "Property": "Data"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "121.56266494294921D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "cotacoes.Cotação do dia"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "128.6666822694536D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "transacoes.Valor Total"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.66666131386967D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "calendario.MesAno"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "165.22218967305383D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "transacoes.Cotação corrigida"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113.66665019293825D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "transacoes.Total R$"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8c532e56b72ada370abd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cotacoes"
+              }
+            },
+            "Property": "Cotação do dia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ac026f26592750e29188",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "transacoes"
+              }
+            },
+            "Property": "Valor Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c0fa88caad8c4039c56a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calendario"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f811bd7405be013d13ab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "transacoes"
+              }
+            },
+            "Property": "Cotação corrigida"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
