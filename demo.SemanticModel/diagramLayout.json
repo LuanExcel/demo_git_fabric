@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 34.654233112068823,
+        "x": 0,
         "y": 36.167066854448194
       },
       "nodes": [
         {
           "location": {
             "x": 595.50670501469347,
-            "y": 3.7412679999999945
+            "y": 5.61190199999999
           },
           "nodeIndex": "calendario",
           "nodeLineageTag": "0a09eab6-d2f5-4e5a-b1b4-0ef99790f0f8",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 614.83992801469344,
-            "y": 400.37278600000008
+            "y": 402.24342000000007
           },
           "nodeIndex": "cotacoes",
           "nodeLineageTag": "ea20dd90-0f7a-4a06-a33f-7f3270c2e217",
@@ -36,21 +36,8 @@
         },
         {
           "location": {
-            "x": 1136.3830500146937,
-            "y": 61
-          },
-          "nodeIndex": "data_final",
-          "nodeLineageTag": "0f9097fe-79d5-4acf-8315-021bbb80342f",
-          "size": {
-            "height": 104,
-            "width": 234
-          },
-          "zIndex": 2
-        },
-        {
-          "location": {
             "x": 243.85195019318508,
-            "y": 5.5374595700458258
+            "y": 7.4080935700458213
           },
           "nodeIndex": "moedas",
           "nodeLineageTag": "f346b67b-22b8-4782-9d8d-eaf9a50e1cef",
@@ -63,7 +50,7 @@
         {
           "location": {
             "x": 184.638636,
-            "y": 386.20029800000009
+            "y": 388.07093200000008
           },
           "nodeIndex": "transacoes",
           "nodeLineageTag": "a32cd518-cc55-4e42-b8d4-05943f578ad5",
@@ -72,6 +59,18 @@
             "width": 234
           },
           "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 714.20129201469342,
+            "y": 200.18639300000007
+          },
+          "nodeIndex": "_Medidas",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas as tabelas",
