@@ -6,4 +6,4 @@ Depois faremos isso no fabric
 
 E ainda replicaremos com AzureDevOps!
 
-A aula está relamente incrível
+A aula está realmente incrível
