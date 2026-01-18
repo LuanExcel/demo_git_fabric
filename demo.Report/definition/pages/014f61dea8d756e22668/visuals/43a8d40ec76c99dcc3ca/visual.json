@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "43a8d40ec76c99dcc3ca",
+  "position": {
+    "x": 155.06297229219143,
+    "y": 404.43324937027705,
+    "z": 2,
+    "height": 263.87909319899245,
+    "width": 837.88413098236765,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "calendario"
+                    }
+                  },
+                  "Property": "MesAno"
+                }
+              },
+              "queryRef": "calendario.MesAno",
+              "nativeQueryRef": "MesAno",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "moedas"
+                    }
+                  },
+                  "Property": "Moeda"
+                }
+              },
+              "queryRef": "moedas.Moeda",
+              "nativeQueryRef": "Moeda"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cotacoes"
+                    }
+                  },
+                  "Property": "Cotação do dia"
+                }
+              },
+              "queryRef": "cotacoes.Cotação do dia",
+              "nativeQueryRef": "Cotação do dia"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
