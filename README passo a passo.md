@@ -26,3 +26,6 @@ git push origin --delete dev
 
 # voltando pra branch do main
 git switch main
+
+# Atualizar
+git fetch
